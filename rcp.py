@@ -8,19 +8,17 @@ import pandas as pd
 from decouple import config
 from dotenv import load_dotenv
 import os
+import openai
+import config 
 
-load_dotenv()
+# api_key = os.getenv("api_key")
+# endpoint = os.getenv("endpoint")
 
-api_key = os.getenv("api_key")
-endpoint = os.getenv("endpoint")
+api_key = st.secrets['api_key']
+endpoint = st.secrets['endpoint']
 
 print(api_key)
 print(endpoint)
-# endpoint = config(endpoint)
-# openai_api_key = config(openai_api_key)
-
-# load_dotenv()
-
 
 model_id = "receipt_model"
 #formUrl = "YOUR_DOCUMENT"  
